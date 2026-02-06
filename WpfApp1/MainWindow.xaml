@@ -6,6 +6,16 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="FontSize" Value="22"></Setter>
+            <Setter Property="Background" Value="LightGray"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="12"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -34,77 +44,50 @@
             <Label Content="MS" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
             <Label Content="M" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
         </Grid>
-        <Grid x:Name="otherButtons" Grid.Row="2" Grid.ColumnSpan="3">
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Content="%" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="CE" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="C" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="Delete" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        </Grid>
-        <Grid x:Name="algButtons" Grid.Row="3" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Content="1/x" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="x/2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="2\x" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="/" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        </Grid>
-        <Grid x:Name="mulButtons" Grid.Row="4" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Content="7" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="8" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="9" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="X" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        </Grid>
-        <Grid x:Name="minButtons" Grid.Row="5" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Content="4" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="6" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="-" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        </Grid>
-        <Grid x:Name="addButtons" Grid.Row="6" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Content="1" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
-            <Button Content="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="+" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-        </Grid>
-        <Grid x:Name="finalButtons" Grid.Row="7" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Content="+/-" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="." Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-            <Button Content="=" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Content="%" Margin="3"></Button>
+            <Button Content="CE" Margin="3" Grid.Column="1"></Button>
+            <Button Content="C" Margin="3" Grid.Column="2"></Button>
+            <Button Content="Back" Margin="3" Grid.Column="3"></Button>
+
+            <Button Content="1/x" Margin="3" Grid.Row="1"></Button>
+            <Button Content="x^2" Margin="3" Grid.Row="1" Grid.Column="1"></Button>
+            <Button Content="sqrt" Margin="3" Grid.Row="1" Grid.Column="2"></Button>
+            <Button Content="÷" Margin="3" Grid.Row="1" Grid.Column="3"></Button>
+
+            <Button Content="7" Margin="3" Grid.Row="2"></Button>
+            <Button Content="8" Margin="3" Grid.Row="2" Grid.Column="1"></Button>
+            <Button Content="9" Margin="3" Grid.Row="2" Grid.Column="2"></Button>
+            <Button Content="×" Margin="3" Grid.Row="2" Grid.Column="3"></Button>
+
+            <Button Content="4" Margin="3" Grid.Row="3"></Button>
+            <Button Content="5" Margin="3" Grid.Row="3" Grid.Column="1"></Button>
+            <Button Content="6" Margin="3" Grid.Row="3" Grid.Column="2"></Button>
+            <Button Content="-" Margin="3" Grid.Row="3" Grid.Column="3"></Button>
+
+            <Button Content="1" Margin="3" Grid.Row="4"></Button>
+            <Button Content="2" Margin="3" Grid.Row="4" Grid.Column="1"></Button>
+            <Button Content="3" Margin="3" Grid.Row="4" Grid.Column="2"></Button>
+            <Button Content="+" Margin="3" Grid.Row="4" Grid.Column="3"></Button>
+
+            <Button Content="+/-" Margin="3" Grid.Row="5"></Button>
+            <Button Content="0" Margin="3" Grid.Row="5" Grid.Column="1"></Button>
+            <Button Content="." Margin="3" Grid.Row="5" Grid.Column="2"></Button>
+            <Button Content="=" Margin="3" Grid.Row="5" Grid.Column="3"></Button>
         </Grid>
     </Grid>
 </Window>
